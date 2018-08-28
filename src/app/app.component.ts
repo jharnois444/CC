@@ -13,5 +13,7 @@ export class AppComponent {
   title = 'Capco-Challenge';
 
   constructor( private apiService: ApiService) {
+    this.apiService.getImages()
+      .then(res => console.log(res.json()));
   }
 }
